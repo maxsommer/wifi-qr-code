@@ -3,9 +3,8 @@
 
 <style>
 	main {
-		display: flex;
+		display: block;
 		flex-direction: column;
-
 		max-width: 80rem;
 	}
 

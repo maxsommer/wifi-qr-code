@@ -21,30 +21,22 @@
 	}
 </script>
 
-<label>
-	SSID
-	<input type="text" placeholder="ItHurtsWhenIP" bind:value={ssid} />
-</label><br />
+<label for="ssid">SSID</label>
+<input id="ssid" type="text" placeholder="ItHurtsWhenIP" bind:value={ssid} />
 
-<label>
-	Password
-	<input type="password" placeholder="MyDogBarkyIsCool" bind:value={password} />
-</label><br />
+<label for="password">Password</label>
+<input id="password" type="password" placeholder="MyDogBarkyIsCool" bind:value={password} />
 
-<label>
-	Security
-	<select bind:value={security}>
-		<option value="WPA2">WPA2</option>
-		<option value="WEP">WEP</option>
-		<option value="WPA">WPA</option>
-		<option value="none">None</option>
-	</select>
-</label><br />
+<label for="security">Security</label>
+<select id="security" bind:value={security}>
+	<option value="WPA2">WPA2</option>
+	<option value="WEP">WEP</option>
+	<option value="WPA">WPA</option>
+	<option value="none">None</option>
+</select>
 
-<label>
-	Hidden?
-	<input type="checkbox" bind:checked={isHidden} />
-</label><br />
+<label for="isHidden">Hidden?</label>
+<input id="isHidden" type="checkbox" bind:checked={isHidden} />
 
 <button on:click={generateCode}>Submit</button>
 
@@ -52,5 +44,9 @@
 	label {
 		display: block;
 		position: relative;
+	}
+	input,
+	select {
+		margin-bottom: 0.5rem;
 	}
 </style>

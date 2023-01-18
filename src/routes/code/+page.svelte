@@ -47,15 +47,9 @@
 <style>
 	.qr-code {
 		display: inline-flex;
-		cursor: pointer;
-		border: 1px solid red;
 		position: relative;
 		width: 50vw;
 		height: 50vw;
-	}
-
-	.qr-code:focus {
-		outline: 2px solid red;
 	}
 
 	section {
