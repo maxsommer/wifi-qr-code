@@ -1,24 +1,16 @@
 # Wifi QR code generator
 
-[Demo is available hosted on Cloudflare Pages.](https://wifi-qr-code.pages.dev/)
+Easily share you Wifi with friends and family via QR codes. This is
+mainly a learning project to get deeper into SvelteKit and explore
+a few libraries within the ecosystem. I'm happy to hear any feedback!
 
-## Developing
+[Available at wifi-qr-co.de/](https://wifi-qr-co.de/)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Libraries used
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
+- [SvelteKit](https://kit.svelte.dev)
+- [soldair/node-qrcode](https://github.com/soldair/node-qrcode)
+- [IBM/carbon-components-svelte](https://github.com/IBM/carbon-components-svelte)
+- [IBM/cabon-icons-svelte](https://github.com/IBM/carbon-icons-svelte)
+- [IBM/carbon-pictograms-svelte](https://github.com/IBM/carbon-pictograms-svelte)
+- [@vite-pwa/sveltekit / vite-plugin-pwa](https://vite-pwa-org.netlify.app/frameworks/sveltekit.html)
