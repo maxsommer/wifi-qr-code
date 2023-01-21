@@ -1,5 +1,7 @@
 # Wifi QR code generator
 
+[Demo is available hosted on Cloudflare Pages.](https://wifi-qr-code.pages.dev/)
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
