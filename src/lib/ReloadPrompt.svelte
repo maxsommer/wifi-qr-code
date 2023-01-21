@@ -43,12 +43,10 @@
 		right: 0;
 		bottom: 0;
 		margin: 16px;
-		padding: 12px;
-		border: 1px solid #8885;
-		border-radius: 4px;
+		padding: 1rem;
+		border: 1px solid #393939;
 		z-index: 2;
 		text-align: left;
-		box-shadow: 3px 4px 5px 0 #8885;
 		background-color: #161616;
 		color: #f4f4f4;
 	}
