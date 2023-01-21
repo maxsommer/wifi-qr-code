@@ -26,6 +26,10 @@
 	<OutboundLink href="//github.com/IBM/carbon-pictograms-svelte">
 		Library: 'carbon-pictograms-svelte'
 	</OutboundLink>
+	<br />
+	<OutboundLink href="//vite-pwa-org.netlify.app/frameworks/sveltekit.html">
+		Library: 'vite-plugin-pwa'
+	</OutboundLink>
 </p>
 <br /><br />
 
