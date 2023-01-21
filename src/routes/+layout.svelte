@@ -30,6 +30,11 @@
 <svelte:head>
 	{@html webManifest}
 	<title>Wifi QR Code generator</title>
+	<script
+		data-goatcounter="https://wifiqrcode.goatcounter.com/count"
+		async
+		src="//gc.zgo.at/count.js"
+	></script>
 </svelte:head>
 
 <Header platformName="Wifi QR Code Generator" href="/">
