@@ -8,4 +8,5 @@
 </script>
 
 <p>Unfortunately something went wrong while generating your QR code.</p>
+<br />
 <Button on:click={generateNew}>Generate new QR code</Button>
