@@ -43,7 +43,11 @@
 	</svelte:fragment>
 	<HeaderUtilities>
 		<HeaderGlobalAction aria-label="About" icon={Information} on:click={link('/about')} />
-		<HeaderGlobalAction aria-label="GitHub" icon={LogoGithub} on:click={link('//github.com')} />
+		<HeaderGlobalAction
+			aria-label="GitHub"
+			icon={LogoGithub}
+			on:click={link('//github.com/maxsommer/wifi-qr-code')}
+		/>
 	</HeaderUtilities>
 </Header>
 
