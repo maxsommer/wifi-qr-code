@@ -40,7 +40,7 @@
 			}),
 		);
 		const queryParams = new URLSearchParams({ state }).toString();
-		goto(`./code/?${queryParams}`, { replaceState: true });
+		goto(`./code?${queryParams}`, { replaceState: true });
 	}
 </script>
 

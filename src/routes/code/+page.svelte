@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import { AspectRatio, Button, ImageLoader } from 'carbon-components-svelte';
-	import { Copy, Download, Repeat } from 'carbon-icons-svelte';
+	import { Download, Repeat } from 'carbon-icons-svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -14,10 +13,6 @@
 			: `data:image/png;base64,${dataUrl}`;
 		link.click();
 		return null;
-	}
-
-	function generateNew() {
-		goto('..').then(() => {});
 	}
 </script>
 

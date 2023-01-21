@@ -3,7 +3,7 @@
 	import { Button } from 'carbon-components-svelte';
 
 	function generateNew() {
-		goto('..').then(() => {});
+		goto('..', { replaceState: true }).then(() => {});
 	}
 </script>
 

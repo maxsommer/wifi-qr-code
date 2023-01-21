@@ -22,7 +22,7 @@
 
 	function link(path: string) {
 		return () => {
-			goto(path);
+			goto(path, { replaceState: true });
 		};
 	}
 </script>
