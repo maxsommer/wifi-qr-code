@@ -1,9 +1,12 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { AspectRatio, Button, ImageLoader } from 'carbon-components-svelte';
+	import { Copy, Download, Repeat } from 'carbon-icons-svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 
-	function startImageDownload(dataUrl: string) {
+	function download(dataUrl: string) {
 		const link = document.createElement('a');
 		link.download = 'qrcode.png';
 		link.href = dataUrl.startsWith('data:image/png;base64,')
@@ -13,46 +16,40 @@
 		return null;
 	}
 
-	function handleKeyDown(event: KeyboardEvent) {
-		if (!data.dataUrl) return;
-
-		if (event.key === 'Enter' || event.key === ' ') {
-			startImageDownload(data.dataUrl);
-		}
-	}
-
 	function copyCurrentUrl() {
 		const url = window.location.href;
 		navigator.clipboard.writeText(url);
 	}
+
+	function generateNew() {
+		goto('..').then(() => {});
+	}
 </script>
 
-<section>
-	<p>
-		<img class="qr-code" src={data.dataUrl} alt="QR Code" />
-	</p>
+<AspectRatio ratio="1x1">
+	<ImageLoader src={data.dataUrl} alt="Your Wifi QR code" fadeIn />
+</AspectRatio>
 
-	<p>
-		<button on:click={startImageDownload(data.dataUrl)} on:keyup={handleKeyDown}>
-			Download as image
-		</button>
-		<button on:click={copyCurrentUrl}> Copy link to this page </button>
-	</p>
-
-	<p>
-		<a href="..">Generate a new QR code</a>
-	</p>
-</section>
+<div class="button-group">
+	<Button class="button" kind="secondary" on:click={download(data.dataUrl)} icon={Download}>
+		Download
+	</Button>
+	<Button class="button" kind="secondary" on:click={copyCurrentUrl} icon={Copy}>Copy link</Button>
+	<Button class="button" kind="tertiary" href=".." icon={Repeat}>Generate a new code</Button>
+</div>
+<br />
+<br />
 
 <style>
-	.qr-code {
-		display: inline-flex;
-		position: relative;
-		width: 50vw;
-		height: 50vw;
+	.button-group {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	section {
-		display: block;
+	.button-group > :global(.button) {
+		width: 100%;
+		margin-bottom: 1rem;
 	}
 </style>
