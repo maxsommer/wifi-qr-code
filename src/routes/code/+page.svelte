@@ -16,11 +16,6 @@
 		return null;
 	}
 
-	function copyCurrentUrl() {
-		const url = window.location.href;
-		navigator.clipboard.writeText(url);
-	}
-
 	function generateNew() {
 		goto('..').then(() => {});
 	}
@@ -34,7 +29,6 @@
 	<Button class="button" kind="secondary" on:click={download(data.dataUrl)} icon={Download}>
 		Download
 	</Button>
-	<Button class="button" kind="secondary" on:click={copyCurrentUrl} icon={Copy}>Copy link</Button>
 	<Button class="button" kind="tertiary" href=".." icon={Repeat}>Generate a new code</Button>
 </div>
 <br />
