@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { pwaInfo } from 'virtual:pwa-info';
+
 	import { goto } from '$app/navigation';
 	import {
 		Content,
@@ -10,6 +13,13 @@
 	import 'carbon-components-svelte/css/g100.css';
 	import { Information, LogoGithub } from 'carbon-icons-svelte';
 
+	let ReloadPrompt: any;
+	onMount(async () => {
+		pwaInfo && (ReloadPrompt = (await import('$lib/ReloadPrompt.svelte')).default);
+	});
+
+	$: webManifest = pwaInfo ? pwaInfo.webManifest.linkTag : '';
+
 	function link(path: string) {
 		return () => {
 			goto(path);
@@ -18,6 +28,7 @@
 </script>
 
 <svelte:head>
+	{@html webManifest}
 	<title>Wifi QR Code generator</title>
 </svelte:head>
 
@@ -34,6 +45,10 @@
 <Content class="main-wrapper">
 	<slot />
 </Content>
+
+{#if ReloadPrompt}
+	<svelte:component this={ReloadPrompt} />
+{/if}
 
 <style>
 	:global(.main-wrapper) {

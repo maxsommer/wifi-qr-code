@@ -1,6 +1,5 @@
 <script>
 	import { ExpandableTile, ListItem, OutboundLink, UnorderedList } from 'carbon-components-svelte';
-	import { Email } from 'carbon-icons-svelte';
 </script>
 
 <h2>About</h2>
