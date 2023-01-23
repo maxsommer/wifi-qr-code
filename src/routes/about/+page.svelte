@@ -1,6 +1,11 @@
 <script>
 	import { ExpandableTile, ListItem, OutboundLink, UnorderedList } from 'carbon-components-svelte';
+	import { APP_NAME } from '$lib/globals';
 </script>
+
+<svelte:head>
+	<title>{APP_NAME} | About</title>
+</svelte:head>
 
 <h2>About</h2>
 <br />
