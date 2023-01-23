@@ -19,10 +19,11 @@
 		</OverflowMenu>
 	</div>
 	<div class="content">
-		<div><span>SSID</span><br />{code.ssid}</div>
+		<div><span>Name</span><br />{code.name}</div>
 		<div class="spacer" />
+		<Tag><span>SSID:</span>{code.ssid}</Tag>
 		<Tag><span>Security:</span>{code.security}</Tag>
-		<Tag><span>Visibility:</span>{code.isHidden ? 'Hidden' : 'Visible'}</Tag>
+		<Tag><span>Visibility:</span>{code.isHidden === 'true' ? 'Hidden' : 'Visible'}</Tag>
 	</div>
 	<div class="actions">
 		<Button kind="ghost" size="field" icon={ArrowRight} href={`/code/${code.id}`}>Show</Button>

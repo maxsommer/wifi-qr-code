@@ -23,6 +23,7 @@
 
 	let state: 'loading' | 'ready' = 'ready';
 
+	let name = '';
 	let ssid = '';
 	let password = '';
 	let security: Security = 'WPA2';
@@ -45,6 +46,7 @@
 		const qrCodeString = getWifiQRString(ssid, security, password, isHidden === 'true');
 		const code: Code = {
 			id: uuid(),
+			name: name.length ? name : ssid,
 			ssid,
 			password: btoa(password),
 			security,
@@ -86,6 +88,9 @@
 </Grid>
 
 <br />
+<br />
+
+<TextInput labelText="Description" placeholder="Wifi at home" bind:value={name} maxlength={32} />
 <br />
 
 <TextInput labelText="SSID" placeholder="Network name" bind:value={ssid} maxlength={32} />

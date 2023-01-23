@@ -33,7 +33,7 @@
 </svelte:head>
 
 <Link href="../.."><ArrowLeft /> Back to overview</Link>
-<h2>QR code for {code.ssid}</h2>
+<h2>QR code for '{code.name}'</h2>
 <br />
 
 <AspectRatio ratio="1x1">

@@ -2,6 +2,7 @@ import QRCode from 'qrcode';
 
 export interface WifiData {
 	id: string;
+	name: string;
 	security: Security;
 	ssid: string;
 	password: string;
