@@ -17,7 +17,12 @@ function createCount() {
 				return updatedState;
 			});
 		},
-		remove: (id: string) => update((codes) => codes.filter((code) => code.id !== id)),
+		remove: (id: string) =>
+			update((codes) => {
+				const updatedState = codes.filter((code) => code.id !== id);
+				localStorage.setItem('codes', JSON.stringify(updatedState));
+				return updatedState;
+			}),
 	};
 }
 
