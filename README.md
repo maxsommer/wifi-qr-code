@@ -8,6 +8,11 @@ a few libraries within the ecosystem. I'm happy to hear any feedback!
 
 ![Screen recording of Wifi QR code generator](./media/screenrecording.gif)
 
+## Links
+
+- [Changelog](./CHANGELOG.md)
+- [License: MIT](./LICENSE)
+
 ## Libraries used
 
 - [SvelteKit](https://kit.svelte.dev)
