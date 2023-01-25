@@ -7,7 +7,7 @@ const config: UserConfig = {
 		sveltekit(),
 		SvelteKitPWA({
 			manifest: {
-				name: 'Wifi QR Code Generator',
+				name: 'Wifi QR Code',
 				short_name: 'Wifi QR Code',
 				theme_color: '#161616',
 				background_color: '#161616',
