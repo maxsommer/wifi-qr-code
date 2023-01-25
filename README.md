@@ -6,6 +6,8 @@ a few libraries within the ecosystem. I'm happy to hear any feedback!
 
 [Available at wifi-qr-co.de/](https://wifi-qr-co.de/)
 
+![Screen recording of Wifi QR code generator](./media/screenrecording.gif)
+
 ## Libraries used
 
 - [SvelteKit](https://kit.svelte.dev)
