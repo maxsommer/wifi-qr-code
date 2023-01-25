@@ -19,7 +19,7 @@
 	import { goto } from '$app/navigation';
 	import { APP_NAME } from '$lib/globals';
 	import { getQRCodeDataUrl, getWifiQRString, type Code, type Security } from '$lib/qr.lib';
-	import { codes } from '$lib/stores';
+	import { codes, notifications } from '$lib/stores';
 
 	let state: 'loading' | 'ready' = 'ready';
 
@@ -62,7 +62,11 @@
 				codes.add({ ...code, dataUrl, type: 'image/png' }), goto(`../code/${code.id}`);
 			})
 			.catch((error) => {
-				console.error(error);
+				notifications.add({
+					kind: 'error',
+					title: 'Sorry, something went wrong.',
+					message: 'Displaying your QR code failed. Please try again later.',
+				});
 			});
 	}
 </script>

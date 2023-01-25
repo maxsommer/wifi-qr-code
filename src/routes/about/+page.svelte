@@ -15,29 +15,6 @@
 </p>
 <br /><br />
 
-<h2>Technologies</h2>
-<br />
-<p>
-	<OutboundLink href="//kit.svelte.dev">Framework: SvelteKit</OutboundLink><br />
-	<OutboundLink href="//github.com/soldair/node-qrcode">Library: 'qrcode'</OutboundLink><br />
-	<OutboundLink href="//github.com/IBM/carbon-components-svelte">
-		Library: 'carbon-components-svelte'
-	</OutboundLink>
-	<br />
-	<OutboundLink href="//github.com/IBM/carbon-icons-svelte">
-		Library: 'carbon-icons-svelte'
-	</OutboundLink>
-	<br />
-	<OutboundLink href="//github.com/IBM/carbon-pictograms-svelte">
-		Library: 'carbon-pictograms-svelte'
-	</OutboundLink>
-	<br />
-	<OutboundLink href="//vite-pwa-org.netlify.app/frameworks/sveltekit.html">
-		Library: 'vite-plugin-pwa'
-	</OutboundLink>
-</p>
-<br /><br />
-
 <h2>Legal</h2>
 <br />
 <ExpandableTile>

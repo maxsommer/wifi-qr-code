@@ -1,31 +1,21 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { pwaInfo } from 'virtual:pwa-info';
+	import { goto } from '$app/navigation';
+	import NotificationHandler from '$lib/components/NotificationHandler.svelte';
+	import { APP_NAME, GITHUB_URL } from '$lib/globals';
 	import {
 		Content,
 		Header,
 		HeaderAction,
-		HeaderGlobalAction,
+		HeaderActionLink,
 		HeaderPanelLink,
 		HeaderPanelLinks,
 		HeaderUtilities,
-		SideNav,
-		SideNavDivider,
-		SideNavItems,
-		SideNavLink,
 		SkipToContent,
 	} from 'carbon-components-svelte';
 	import 'carbon-components-svelte/css/g100.css';
-	import {
-		Add,
-		Information,
-		List,
-		LogoGithub,
-		Settings,
-		SettingsAdjust,
-	} from 'carbon-icons-svelte';
-	import { APP_NAME, GITHUB_URL } from '$lib/globals';
-	import { goto } from '$app/navigation';
+	import { Menu, SettingsAdjust, Unknown } from 'carbon-icons-svelte';
+	import { onMount } from 'svelte';
+	import { pwaInfo } from 'virtual:pwa-info';
 
 	/* let isSideNavOpen = false; */
 	let isOpen = false;
@@ -55,16 +45,12 @@
 	</svelte:fragment>
 
 	<HeaderUtilities>
-		<HeaderGlobalAction aria-label="Overview" icon={List} on:click={navigate('/')} />
-		<!-- <HeaderGlobalAction
-			aria-label="Settings"
-			icon={SettingsAdjust}
-			on:click={navigate('/settings')}
-		/> -->
-		<HeaderAction bind:isOpen icon={Information}>
+		<HeaderActionLink aria-label="Frequently asked questions" icon={Unknown} href="/faq" />
+		<HeaderActionLink aria-label="Settings" icon={SettingsAdjust} href="/settings" />
+		<HeaderAction bind:isOpen icon={Menu}>
 			<HeaderPanelLinks>
-				<HeaderPanelLink href="/about">About</HeaderPanelLink>
-				<HeaderPanelLink target="_blank" href={GITHUB_URL}>GitHub</HeaderPanelLink>
+				<HeaderPanelLink href="/about">About & Legal</HeaderPanelLink>
+				<HeaderPanelLink target="_blank" href={GITHUB_URL}>GitHub repository</HeaderPanelLink>
 			</HeaderPanelLinks>
 		</HeaderAction>
 	</HeaderUtilities>
@@ -77,6 +63,7 @@
 </Content>
 
 <NotificationHandler />
+
 {#if ReloadPrompt}
 	<svelte:component this={ReloadPrompt} />
 {/if}
@@ -104,21 +91,7 @@
 	:global(.text-centered) {
 		text-align: center;
 	}
-
-	:global(.bx--side-nav) {
-		background-color: #161616;
-	}
-	:global(.bx--side-nav__link:hover) {
-		background-color: #262626 !important;
-	}
-
-	:global(.bx--side-nav__link-text) {
-		color: #f4f4f4 !important;
-	}
-	:global(.bx--side-nav__icon > svg) {
-		fill: #f4f4f4 !important;
-	}
-	:global(.bx--side-nav__divider) {
-		background-color: #525252 !important;
+	:global(.bx--list__item) {
+		margin-left: 1.5rem;
 	}
 </style>
