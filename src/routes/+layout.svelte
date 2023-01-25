@@ -76,6 +76,7 @@
 	</div>
 </Content>
 
+<NotificationHandler />
 {#if ReloadPrompt}
 	<svelte:component this={ReloadPrompt} />
 {/if}

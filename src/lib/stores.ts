@@ -1,3 +1,4 @@
+import type { Notification } from './notification';
 import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
 import type { PersistedCode } from './qr.lib';
@@ -26,4 +27,22 @@ function createCount() {
 	};
 }
 
-export const codes = createCount();
+
+const DEFAULT_NOTIFICATION_TIME = 8000;
+function createNotificationStore() {
+	const { subscribe, update } = writable<Notification[]>([]);
+	return {
+		subscribe,
+		add: (notification: Omit<Notification, 'id' | 'timeout'>) =>
+			update((notifications) => {
+				const id = v4();
+				setTimeout(() => {
+					update((n) => n.filter((notification) => notification.id !== id));
+				}, DEFAULT_NOTIFICATION_TIME);
+				return [...notifications, { id, timeout: DEFAULT_NOTIFICATION_TIME, ...notification }];
+			}),
+		remove: (id: string) =>
+			update((notifications) => notifications.filter((notification) => notification.id !== id)),
+	};
+}
+export const notifications = createNotificationStore();
