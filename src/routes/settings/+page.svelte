@@ -95,13 +95,13 @@
 		labelText="Drag and drop a backup file here or click to upload"
 		validateFiles={(files) => {
 			return files.filter((file) => {
-				const sizeValid = file.size < 3 * 1_024 * 1_024;
+				const sizeValid = file.size < 10 * 1_024 * 1_024;
 				const extensionValid = file.name.split('.').pop() === 'zip';
 				const mimeTypeValid = file.type === 'application/zip';
 
 				let errorMessage = '';
 				if (!sizeValid) {
-					errorMessage += 'File size is too large - maximum is 3 megabyte. ';
+					errorMessage += 'File size is too large - maximum is 10 megabyte. ';
 				}
 				if (!extensionValid) {
 					errorMessage += 'File extension is not valid. ';
