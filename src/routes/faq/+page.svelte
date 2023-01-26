@@ -6,6 +6,7 @@
 		ListItem,
 		OrderedList,
 		OutboundLink,
+		UnorderedList,
 	} from 'carbon-components-svelte';
 </script>
 
@@ -121,3 +122,28 @@
 		</p>
 	</div>
 </ExpandableTile>
+
+<br />
+
+<ExpandableTile>
+	<div slot="above"><h3>Are you using analytics?</h3></div>
+	<div slot="below">
+		<p>
+			We use a privacy-friendly analytics service called
+			<OutboundLink href="https://goatcounter.com">'Goatcounter'</OutboundLink>. Your data is at no
+			point transferred to a third-party. It will track only the following point of data:<br />
+			<UnorderedList>
+				<ListItem>Page visited</ListItem>
+				<ListItem>Browser used</ListItem>
+				<ListItem>Browser language</ListItem>
+				<ListItem>Operating system used</ListItem>
+				<ListItem>Screen resolution of your device</ListItem>
+				<ListItem>Country you're from</ListItem>
+				<ListItem>Page you're coming from (referrer)</ListItem>
+			</UnorderedList>
+			We will never use analytics to track you across the web or enable a third-party to do so.
+		</p>
+	</div>
+</ExpandableTile>
+
+<br />
