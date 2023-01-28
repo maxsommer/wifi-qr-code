@@ -29,7 +29,7 @@
 </script>
 
 <svelte:head>
-	<title>{APP_NAME} | New</title>
+	<title>{APP_NAME} | QR code for '{code.name}'</title>
 </svelte:head>
 
 <Link href="../.."><ArrowLeft /> Back to overview</Link>
