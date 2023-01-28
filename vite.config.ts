@@ -28,7 +28,7 @@ const config: UserConfig = {
 						type: 'image/png',
 					},
 					{
-						src: 'static/apple-touch-icon-76x76.png',
+						src: '/apple-touch-icon-76x76.png',
 						sizes: '76x76',
 						type: 'image/png',
 					},
