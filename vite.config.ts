@@ -5,7 +5,7 @@ import type { UserConfig } from 'vite';
 const config: UserConfig = {
 	plugins: [
 		sveltekit(),
-		SvelteKitPWA(/* {
+		SvelteKitPWA({
 			manifest: {
 				name: 'Wifi QR Code',
 				short_name: 'Wifi QR Code',
@@ -63,9 +63,8 @@ const config: UserConfig = {
 						type: 'image/png',
 					},
 				],
-
 			},
-		} */),
+		}),
 	],
 };
 
