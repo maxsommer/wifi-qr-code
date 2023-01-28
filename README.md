@@ -5,6 +5,7 @@ mainly a learning project to get deeper into SvelteKit and explore
 a few libraries within the ecosystem. I'm happy to hear any feedback!
 
 [Available at wifi-qr-co.de/](https://wifi-qr-co.de/)
+[ProductHunt launch page](https://www.producthunt.com/posts/wifi-qr-code)
 
 ![Screen recording of Wifi QR code generator](./media/screenrecording.gif)
 
