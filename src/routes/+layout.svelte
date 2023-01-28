@@ -47,7 +47,7 @@
 	<HeaderUtilities>
 		<HeaderActionLink aria-label="Frequently asked questions" icon={Unknown} href="/faq" />
 		<HeaderActionLink aria-label="Settings" icon={SettingsAdjust} href="/settings" />
-		<HeaderAction bind:isOpen icon={Menu}>
+		<HeaderAction bind:isOpen icon={Menu} aria-label="Open additional navigation items">
 			<HeaderPanelLinks>
 				<HeaderPanelLink href="/about">About & Legal</HeaderPanelLink>
 				<HeaderPanelLink target="_blank" href={GITHUB_URL}>GitHub repository</HeaderPanelLink>
