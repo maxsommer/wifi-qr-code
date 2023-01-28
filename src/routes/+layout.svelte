@@ -51,6 +51,22 @@
 			<HeaderPanelLinks>
 				<HeaderPanelLink href="/about">About & Legal</HeaderPanelLink>
 				<HeaderPanelLink target="_blank" href={GITHUB_URL}>GitHub repository</HeaderPanelLink>
+
+				<div class="producthunt">
+					<a
+						href="https://www.producthunt.com/posts/wifi-qr-code?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-wifi&#0045;qr&#0045;code"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img
+							src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=376977&theme=neutral"
+							alt="Wifi&#0032;QR&#0032;Code - Share&#0032;your&#0032;Wifi&#0032;with&#0032;friends&#0032;&#0038;&#0032;family | Product Hunt"
+							style="width: 250px; height: 54px;"
+							width="250"
+							height="54"
+						/>
+					</a>
+				</div>
 			</HeaderPanelLinks>
 		</HeaderAction>
 	</HeaderUtilities>
@@ -93,5 +109,12 @@
 	}
 	:global(.bx--list__item) {
 		margin-left: 1.5rem;
+	}
+
+	.producthunt {
+		padding: 0.375rem 1rem;
+	}
+	.producthunt a img {
+		max-width: 200px;
 	}
 </style>
